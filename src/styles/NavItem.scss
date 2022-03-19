@@ -1,0 +1,24 @@
+@use "vars";
+
+%activeItem {
+    cursor: pointer;
+    background-color: vars.$wine-ligth !important;
+}
+
+.NavItem {
+    width: fit-content;
+    margin: vars.$mAround;
+    padding: calc(vars.$pComponent * 2);
+    font-size: vars.$mdFont;
+    color: vars.$white;
+    background-color: vars.$wine;
+    border-radius: vars.$bradius;
+
+    &:hover {
+        @extend %activeItem;
+    }
+}
+
+.NavItem-active {
+    @extend %activeItem;
+}
