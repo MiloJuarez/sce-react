@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtrarPlugin = require("mini-css-extract-plugin");
+const HtmlMinifierTerser = require("html-minifier-terser");
 
 module.exports = {
     entry: "./src/index.js",
@@ -35,6 +37,15 @@ module.exports = {
                 },
             },
             {
+                test: /\.(css|scss)$/,
+                use: [
+                    MiniCssExtrarPlugin.loader,
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+            {
                 test: /\.png|jpg|svg|gif$/,
                 type: "asset",
             },
@@ -45,6 +56,9 @@ module.exports = {
             template: "./public/index.html",
             filename: "index.html",
         }),
+        new MiniCssExtrarPlugin({
+            filename: "styles/[name].[contenthash].css",
+        }),
     ],
     devServer: {
         static: {
@@ -53,5 +67,9 @@ module.exports = {
         port: 3005,
         compress: true,
         historyApiFallback: true,
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [new HtmlMinifierTerser()],
     },
 };
