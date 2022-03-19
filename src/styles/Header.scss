@@ -17,3 +17,8 @@
     font-weight: 400;
     color: vars.$white;
 }
+@media screen and (max-width: vars.$brMaxWidth) {
+    .Header {
+        justify-content: center;
+    }
+}

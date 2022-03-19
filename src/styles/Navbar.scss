@@ -3,3 +3,8 @@
 .Navbar {
     display: flex;
 }
+@media screen and (max-width: vars.$brMaxWidth) {
+    .Navbar {
+        display: none;
+    }
+}
