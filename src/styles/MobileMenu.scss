@@ -2,14 +2,14 @@
 
 .MobileMenu {
     position: absolute;
-    top: 100vh;
-    left: 100vw;
-    width: 100vw;
-    height: 100vh;
+    top: vars.$hHeader;
+    left: 0;
+    width: 0;
+    height: 0;
     min-width: vars.$brMaxWidth;
     padding: vars.$pContainer 0 0 vars.$pContainer;
     background-color: vars.$gray-dark;
-    transform: scale(0);
+    // transform: scale(0);
     animation-name: cornerToCorner;
     animation-duration: 0.4s;
     animation-timing-function: ease-in-out;
@@ -23,15 +23,11 @@
 }
 @keyframes cornerToCorner {
     from {
-        top: 100vh;
-        left: 100vw;
-        transform: scale(0);
+        width: 100vw;
         opacity: 0;
     }
     to {
-        top: vars.$hHeader;
-        left: 0;
-        transform: scale(1);
+        height: 100vh;
         opacity: 1;
     }
 }
