@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "@containers/Layout";
 import Schools from "@pages/Schools";
+import NotFound from "@pages/NotFound";
 import "@styles/global.css";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Schools />} />
                     <Route path='/escuelas' element={<Schools />} />
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

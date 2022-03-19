@@ -1,0 +1,12 @@
+@use "vars";
+
+.NotFound {
+    display: grid;
+    margin-top: vars.$nhHeader;
+    place-content: center;
+}
+.NotFound__message {
+    font-size: vars.$vbgFont;
+    font-weight: lighter;
+    color: vars.$gray-dark;
+}
