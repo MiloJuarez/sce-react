@@ -2,6 +2,7 @@
 
 .Navbar {
     display: flex;
+    box-sizing: border-box;
 }
 @media screen and (max-width: vars.$brMaxWidth) {
     .Navbar {

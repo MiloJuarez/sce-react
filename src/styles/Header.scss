@@ -21,5 +21,6 @@
 @media screen and (max-width: vars.$brMaxWidth) {
     .Header {
         justify-content: center;
+        height: vars.$hHeader;
     }
 }

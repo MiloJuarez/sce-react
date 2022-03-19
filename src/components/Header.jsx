@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "@components/Navbar";
 import "@styles/Header.scss";
 import Menu from "./Menu";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
     const APP_NAME = process.env.APP_NAME;
@@ -15,6 +16,7 @@ const Header = () => {
             <Navbar />
             <Menu handleToggle={() => handleToggleMenu()} toggle={toggleMenu} />
             <h1>{APP_NAME}</h1>
+            {toggleMenu ? <MobileMenu /> : null}
         </div>
     );
 };

@@ -1,0 +1,16 @@
+@use "vars";
+
+.MobileMenu {
+    position: absolute;
+    top: vars.$hHeader;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: vars.$pContainer 0 0 vars.$pContainer;
+    background-color: vars.$gray;
+    box-sizing: border-box;
+}
+.MobileMenu .Navbar {
+    display: flex;
+    flex-direction: column-reverse;
+}
