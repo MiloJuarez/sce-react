@@ -1,6 +1,7 @@
 @use "vars";
 
 .Header {
+    position: relative;
     display: flex;
     width: vars.$wFull;
     max-width: vars.$maxWidth;
