@@ -6,6 +6,7 @@
     left: 100vw;
     width: 100vw;
     height: 100vh;
+    min-width: vars.$brMaxWidth;
     padding: vars.$pContainer 0 0 vars.$pContainer;
     background-color: vars.$gray-dark;
     transform: scale(0);

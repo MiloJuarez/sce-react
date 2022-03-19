@@ -1,6 +1,7 @@
 @use "vars";
 
 .Layout {
+    min-width: vars.$brMaxWidth;
     background-color: vars.$bg;
     box-sizing: border-box;
 }

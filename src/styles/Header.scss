@@ -7,7 +7,7 @@
     display: flex;
     width: vars.$wFull;
     height: vars.$nhHeader;
-    max-width: vars.$maxWidth;
+    min-width: vars.$brMaxWidth;
     justify-content: space-between;
     align-items: center;
     padding: vars.$pContainer vars.$pComponent;
