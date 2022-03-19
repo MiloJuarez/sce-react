@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtrarPlugin = require("mini-css-extract-plugin");
 const HtmlMinifierTerser = require("html-minifier-terser");
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
     entry: "./src/index.js",
@@ -60,6 +61,7 @@ module.exports = {
         new MiniCssExtrarPlugin({
             filename: "styles/[name].[contenthash].css",
         }),
+        new Dotenv(),
     ],
     devServer: {
         static: {
