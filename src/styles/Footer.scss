@@ -1,0 +1,13 @@
+@use "vars";
+
+.Footer {
+    width: vars.$wFull;
+    min-height: vars.$nhHeader;
+    padding: vars.$pContainer;
+    background-color: vars.$green;
+    box-sizing: border-box;
+}
+.Footer__copyright {
+    font-size: vars.$mdFont;
+    color: vars.$white;
+}

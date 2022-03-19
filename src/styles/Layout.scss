@@ -1,5 +1,10 @@
 @use "vars";
 
 .Layout {
+    background-color: vars.$bg;
+    box-sizing: border-box;
+}
+.Layout__pages {
+    min-height: vars.$mhContent;
     padding: vars.$nhHeader vars.$pPages;
 }
