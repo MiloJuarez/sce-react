@@ -2,15 +2,35 @@
 
 .MobileMenu {
     position: absolute;
-    top: vars.$hHeader;
-    left: 0;
+    top: 100vh;
+    left: 100vw;
     width: 100vw;
     height: 100vh;
     padding: vars.$pContainer 0 0 vars.$pContainer;
-    background-color: vars.$gray;
+    background-color: vars.$gray-dark;
+    transform: scale(0);
+    animation-name: cornerToCorner;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
     box-sizing: border-box;
 }
 .MobileMenu .Navbar {
     display: flex;
     flex-direction: column-reverse;
+}
+@keyframes cornerToCorner {
+    from {
+        top: 100vh;
+        left: 100vw;
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        top: vars.$hHeader;
+        left: 0;
+        transform: scale(1);
+        opacity: 1;
+    }
 }
