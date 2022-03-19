@@ -1,9 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtrarPlugin = require("mini-css-extract-plugin");
-const HtmlMinifierTerser = require("html-minifier-terser");
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -17,10 +17,10 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
-            "@components": "src/components/",
-            "@containers": "src/containers/",
-            "@pages": "src/pages/",
-            "@styles": "src/styles/",
+            "@components": path.resolve(__dirname, "src/components/"),
+            "@containers": path.resolve(__dirname, "src/containers/"),
+            "@pages": path.resolve(__dirname, "src/pages/"),
+            "@styles": path.resolve(__dirname, "src/styles/"),
         },
     },
     module: {
@@ -40,12 +40,7 @@ module.exports = {
             },
             {
                 test: /\.(css|scss)$/,
-                use: [
-                    MiniCssExtrarPlugin.loader,
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader",
-                ],
+                use: ["style-loader", "css-loader", "sass-loader"],
             },
             {
                 test: /\.png|jpg|svg|gif$/,
@@ -61,6 +56,14 @@ module.exports = {
         new MiniCssExtrarPlugin({
             filename: "styles/[name].[contenthash].css",
         }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src", "styles"),
+                    to: "styles",
+                },
+            ],
+        }),
         new Dotenv(),
     ],
     devServer: {
@@ -73,6 +76,6 @@ module.exports = {
     },
     optimization: {
         minimize: true,
-        minimizer: [new CssMinimizerWebpackPlugin(), new HtmlMinifierTerser()],
+        minimizer: [new CssMinimizerWebpackPlugin()],
     },
 };
