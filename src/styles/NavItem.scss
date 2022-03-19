@@ -2,14 +2,15 @@
 
 %activeItem {
     cursor: pointer;
-    background-color: vars.$wine-ligth !important;
+    color: vars.$white !important;
 }
 
 .NavItem {
     width: fit-content;
     padding: calc(vars.$pComponent * 2);
+    margin: vars.$mAround 0;
     font-size: vars.$mdFont;
-    color: vars.$white;
+    color: vars.$gray;
     background-color: vars.$wine;
     border-radius: vars.$bradius;
 
@@ -20,4 +21,5 @@
 
 .NavItem-active {
     @extend %activeItem;
+    background-color: vars.$wine-ligth !important;
 }
