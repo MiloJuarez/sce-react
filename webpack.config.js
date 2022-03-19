@@ -64,7 +64,9 @@ module.exports = {
                 },
             ],
         }),
-        new Dotenv(),
+        new Dotenv({
+            path: path.resolve(__dirname, ".env"),
+        }),
     ],
     devServer: {
         static: {

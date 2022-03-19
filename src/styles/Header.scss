@@ -1,0 +1,19 @@
+@use "vars";
+
+.Header {
+    display: flex;
+    width: vars.$wFull;
+    max-width: vars.$maxWidth;
+    justify-content: space-between;
+    align-items: center;
+    padding: vars.$pContainer vars.$pComponent;
+    background-color: vars.$wine;
+    box-sizing: border-box;
+}
+.Header h1 {
+    margin: 0 vars.$bMargin 0 0;
+    padding: 0;
+    font-size: vars.$mdFont;
+    font-weight: 400;
+    color: vars.$white;
+}

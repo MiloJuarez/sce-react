@@ -1,12 +1,12 @@
 import React from "react";
 import "@styles/global.css";
-import Navbar from "@components/Navbar";
+import Header from "../components/Header";
 
 const App = () => {
     return (
         <React.Fragment>
+            <Header />
             <h1>BUILDING...</h1>
-            <Navbar />
         </React.Fragment>
     );
 };
