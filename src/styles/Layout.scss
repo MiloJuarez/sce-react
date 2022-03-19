@@ -1,0 +1,5 @@
+@use "vars";
+
+.Layout {
+    padding: vars.$nhHeader vars.$pPages;
+}

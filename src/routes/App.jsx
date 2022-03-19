@@ -1,14 +1,20 @@
 import React from "react";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "@containers/Layout";
+import Schools from "@pages/Schools";
 import "@styles/global.css";
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Layout></Layout>
+            <Layout>
+                <Routes>
+                    <Route path='/' element={<Schools />} />
+                    <Route path='/escuelas' element={<Schools />} />
+                </Routes>
+            </Layout>
         </BrowserRouter>
     );
 };
