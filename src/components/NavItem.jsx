@@ -14,4 +14,4 @@ const NavItem = ({ label, active, url }) => {
     );
 };
 
-export default NavItem;
+export default React.memo(NavItem);
