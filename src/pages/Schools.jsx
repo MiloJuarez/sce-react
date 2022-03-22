@@ -1,11 +1,12 @@
 import React from "react";
 
 import "@styles/Schools.scss";
+import ContentTitle from "../components/ContentTitle";
 
 const Schools = () => {
     return (
         <div className='Schools'>
-            <h2>ESCUELAS</h2>
+            <ContentTitle label={"ESCUELAS"} />
         </div>
     );
 };

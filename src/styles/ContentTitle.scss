@@ -1,0 +1,9 @@
+@use "vars";
+
+.ContentTitle {
+    margin: 0;
+    padding: 0 vars.$mMargin;
+    font-size: vars.$vbgFont;
+    font-weight: vars.$fw-light;
+    text-shadow: vars.$gray-dark 2px 2px 5px;
+}
