@@ -12,6 +12,7 @@ import ActionButtonSelect from "@components/ActionButtonSelect";
 import ActionButtonDetails from "@components/ActionButtonDetails";
 import ActionButtonEdit from "@components/ActionButtonEdit";
 import ActionButtonsContainer from "@components/ActionButtonsContainer";
+import TblRowCell from "../components/TblRowCell";
 
 const Schools = () => {
     return (
@@ -33,6 +34,7 @@ const Schools = () => {
                 <ActionButtonDetails model={"Escuela"} />
                 <ActionButtonEdit model={"Escuela"} />
             </ActionButtonsContainer>
+            <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
         </div>
     );
 };

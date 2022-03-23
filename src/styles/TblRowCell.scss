@@ -1,0 +1,9 @@
+@use "vars";
+
+.TblRowCell {
+    width: calc(100% - vars.$pContent);
+    padding: vars.$pComponent;
+    font-size: vars.$nFont;
+    font-weight: vars.$fw-lighter;
+    text-align: center;
+}
