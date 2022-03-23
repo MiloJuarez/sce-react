@@ -1,0 +1,21 @@
+@use "vars";
+
+.BtnArrowBack {
+    width: 24px;
+    height: 24px;
+    padding: vars.$pComponent;
+    margin: vars.$mAround;
+    border-radius: vars.$bradius;
+    box-shadow: 2px 2px 4px vars.$gray-dark;
+    cursor: pointer;
+
+    &:hover {
+        background-color: vars.$gray;
+    }
+}
+
+.BtnArrowBack__icon {
+    width: inherit;
+    height: inherit;
+    color: black;
+}
