@@ -12,8 +12,8 @@ import ActionButtonSelect from "@components/ActionButtonSelect";
 import ActionButtonDetails from "@components/ActionButtonDetails";
 import ActionButtonEdit from "@components/ActionButtonEdit";
 import ActionButtonsContainer from "@components/ActionButtonsContainer";
-import TblRowCell from "../components/TblRowCell";
-import TblRow from "../components/TblRow";
+import TblRowCell from "@components/TblRowCell";
+import TblRow from "@components/TblRow";
 
 const Schools = () => {
     return (
@@ -33,15 +33,13 @@ const Schools = () => {
             <TblRow cells={2} index={0}>
                 <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
                 <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
-                <TblRowCell
-                    value={
-                        <ActionButtonsContainer>
-                            <ActionButtonSelect model={"Escuela"} />
-                            <ActionButtonDetails model={"Escuela"} />
-                            <ActionButtonEdit model={"Escuela"} />
-                        </ActionButtonsContainer>
-                    }
-                />
+                <TblRowCell>
+                    <ActionButtonsContainer>
+                        <ActionButtonSelect model={"Escuela"} />
+                        <ActionButtonDetails model={"Escuela"} />
+                        <ActionButtonEdit model={"Escuela"} />
+                    </ActionButtonsContainer>
+                </TblRowCell>
             </TblRow>
         </div>
     );

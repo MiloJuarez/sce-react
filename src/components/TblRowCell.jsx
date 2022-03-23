@@ -2,8 +2,9 @@ import React from "react";
 
 import "@styles/TblRowCell.scss";
 
-const TblRowCell = ({ value }) => {
-    return <div className='TblRowCell'>{value}</div>;
+// Use children property when passing a component
+const TblRowCell = ({ value, children }) => {
+    return <div className='TblRowCell'>{value ?? children}</div>;
 };
 
 export default TblRowCell;
