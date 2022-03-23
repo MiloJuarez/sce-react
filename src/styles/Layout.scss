@@ -9,3 +9,14 @@
     min-height: vars.$mhContent;
     padding: vars.$nhHeader vars.$pPages;
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: vars.$bradius;
+    background-color: vars.$gray-dark;
+}
+::-webkit-scrollbar-track {
+    border-radius: vars.$bradius;
+    background-color: vars.$white;
+}
