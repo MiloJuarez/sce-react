@@ -1,0 +1,19 @@
+@use "vars";
+
+.ActionButtonEdit {
+    width: vars.$wActionButton;
+    height: vars.$hActionButton;
+    margin: vars.$mMargin;
+    padding: vars.$pComponent;
+    border-radius: vars.$bradius;
+    box-shadow: 2px 2px 4px vars.$gray-dark;
+    cursor: pointer;
+
+    &:hover {
+        background-color: vars.$gray;
+    }
+}
+.ActionButtonEdit .EditIcon {
+    width: inherit;
+    height: inherit;
+}
