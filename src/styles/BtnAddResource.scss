@@ -1,0 +1,22 @@
+@use "vars";
+
+.BtnAddResource {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: vars.$mAround;
+    padding: calc(vars.$pComponent * 2);
+    font-size: vars.$mdFont;
+    font-weight: vars.$fw-light;
+    color: vars.$white;
+    background-color: vars.$cbtnPrimary;
+    border-radius: vars.$bradius;
+    box-shadow: 2px 2px 4px vars.$gray-dark;
+    cursor: pointer;
+}
+.BtnAddResource:active {
+    border: vars.$border solid vars.$info;
+}
+.BtnAddResource .PlusIcon {
+    margin: 0 vars.$mAround;
+}
