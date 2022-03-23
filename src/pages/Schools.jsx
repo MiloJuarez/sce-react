@@ -8,7 +8,8 @@ import BtnAddResource from "@components/BtnAddResource";
 import ContentActions from "@components/ContentActions";
 import TblColumnHeader from "@components/TblColumnHeader";
 import TblHeader from "@components/TblHeader";
-import ActionButtonSelect from "../components/ActionButtonSelect";
+import ActionButtonSelect from "@components/ActionButtonSelect";
+import ActionButtonDetails from "@components/ActionButtonDetails";
 
 const Schools = () => {
     return (
@@ -26,6 +27,7 @@ const Schools = () => {
                 <TblColumnHeader label={"Acciones"} />
             </TblHeader>
             <ActionButtonSelect model={"Escuela"} />
+            <ActionButtonDetails model={"Escuela"} />
         </div>
     );
 };

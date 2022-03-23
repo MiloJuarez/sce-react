@@ -1,6 +1,6 @@
 @use "vars";
 
-.ActionButtonSelect {
+.ActionButtonDetails {
     width: vars.$wActionButton;
     height: vars.$hActionButton;
     margin: vars.$mMargin;
@@ -13,7 +13,7 @@
         background-color: vars.$gray;
     }
 }
-.ActionButtonSelect .FolderIcon {
+.ActionButtonDetails .DetailsIcon {
     width: inherit;
     height: inherit;
 }
