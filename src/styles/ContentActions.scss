@@ -1,0 +1,7 @@
+@use "vars";
+
+.ContentActions {
+    display: flex;
+    justify-content: flex-end;
+    padding: vars.$pComponent 0;
+}

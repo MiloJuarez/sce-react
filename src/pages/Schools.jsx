@@ -5,6 +5,7 @@ import ContentTitle from "@components/ContentTitle";
 import BtnArrowBack from "@components/BtnArrowBack";
 import ContentHeader from "@components/ContentHeader";
 import BtnAddResource from "@components/BtnAddResource";
+import ContentActions from "@components/ContentActions";
 
 const Schools = () => {
     return (
@@ -13,7 +14,9 @@ const Schools = () => {
                 <BtnArrowBack />
                 <ContentTitle label={"ESCUELAS"} />
             </ContentHeader>
-            <BtnAddResource model={"Escuela"} />
+            <ContentActions>
+                <BtnAddResource model={"Escuela"} />
+            </ContentActions>
         </div>
     );
 };
