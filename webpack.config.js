@@ -56,14 +56,14 @@ module.exports = {
         new MiniCssExtrarPlugin({
             filename: "styles/[name].[contenthash].css",
         }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, "src", "styles"),
-                    to: "styles",
-                },
-            ],
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, "src", "styles"),
+        //             to: "styles",
+        //         },
+        //     ],
+        // }),
         new Dotenv({
             path: path.resolve(__dirname, ".env"),
         }),

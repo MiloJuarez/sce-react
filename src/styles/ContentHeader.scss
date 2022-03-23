@@ -1,0 +1,7 @@
+@use "vars";
+
+.ContentHeader {
+    display: flex;
+    align-items: center;
+    padding: vars.$pContent 0 vars.$pContainer 0;
+}
