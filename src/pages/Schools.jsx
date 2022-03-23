@@ -13,6 +13,7 @@ import ActionButtonDetails from "@components/ActionButtonDetails";
 import ActionButtonEdit from "@components/ActionButtonEdit";
 import ActionButtonsContainer from "@components/ActionButtonsContainer";
 import TblRowCell from "../components/TblRowCell";
+import TblRow from "../components/TblRow";
 
 const Schools = () => {
     return (
@@ -29,12 +30,19 @@ const Schools = () => {
                 <TblColumnHeader label={"Ubicacion"} />
                 <TblColumnHeader label={"Acciones"} />
             </TblHeader>
-            <ActionButtonsContainer>
-                <ActionButtonSelect model={"Escuela"} />
-                <ActionButtonDetails model={"Escuela"} />
-                <ActionButtonEdit model={"Escuela"} />
-            </ActionButtonsContainer>
-            <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
+            <TblRow cells={2} index={0}>
+                <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
+                <TblRowCell value={"UNIVERSIDAD TECNOLOGICA DE LA SELVA"} />
+                <TblRowCell
+                    value={
+                        <ActionButtonsContainer>
+                            <ActionButtonSelect model={"Escuela"} />
+                            <ActionButtonDetails model={"Escuela"} />
+                            <ActionButtonEdit model={"Escuela"} />
+                        </ActionButtonsContainer>
+                    }
+                />
+            </TblRow>
         </div>
     );
 };
