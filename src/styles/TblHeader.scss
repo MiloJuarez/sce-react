@@ -1,0 +1,25 @@
+.TblHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+.col-2 {
+    grid-template-columns: 1fr 1fr;
+}
+.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+.col-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+.col-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+.col-7 {
+    grid-template-columns: repeat(7, 1fr);
+}

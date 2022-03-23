@@ -6,6 +6,8 @@ import BtnArrowBack from "@components/BtnArrowBack";
 import ContentHeader from "@components/ContentHeader";
 import BtnAddResource from "@components/BtnAddResource";
 import ContentActions from "@components/ContentActions";
+import TblColumnHeader from "@components/TblColumnHeader";
+import TblHeader from "@components/TblHeader";
 
 const Schools = () => {
     return (
@@ -17,6 +19,11 @@ const Schools = () => {
             <ContentActions>
                 <BtnAddResource model={"Escuela"} />
             </ContentActions>
+            <TblHeader columns={3}>
+                <TblColumnHeader label={"Nombre"} />
+                <TblColumnHeader label={"Ubicacion"} />
+                <TblColumnHeader label={"Acciones"} />
+            </TblHeader>
         </div>
     );
 };

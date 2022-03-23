@@ -1,0 +1,10 @@
+@use "vars";
+
+.TblColumnHeader {
+    width: calc(100% - vars.$pContent);
+    padding: vars.$pComponent 0 vars.$pContainer 0;
+    font-size: vars.$bFont;
+    font-weight: vars.$fw-light;
+    text-align: center;
+    border-bottom: vars.$border solid vars.$gray;
+}
