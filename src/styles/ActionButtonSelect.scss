@@ -1,0 +1,19 @@
+@use "vars";
+
+.ActionButtonSelect {
+    width: vars.$wActionButton;
+    height: vars.$hActionButton;
+    margin: vars.$mAround;
+    padding: vars.$pComponent;
+    border-radius: vars.$bradius;
+    box-shadow: 2px 2px 4px vars.$gray-dark;
+    cursor: pointer;
+
+    &:hover {
+        background-color: vars.$gray;
+    }
+}
+.ActionButtonSelect .FolderIcon {
+    width: inherit;
+    height: inherit;
+}
