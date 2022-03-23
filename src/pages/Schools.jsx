@@ -11,6 +11,7 @@ import TblHeader from "@components/TblHeader";
 import ActionButtonSelect from "@components/ActionButtonSelect";
 import ActionButtonDetails from "@components/ActionButtonDetails";
 import ActionButtonEdit from "@components/ActionButtonEdit";
+import ActionButtonsContainer from "@components/ActionButtonsContainer";
 
 const Schools = () => {
     return (
@@ -27,9 +28,11 @@ const Schools = () => {
                 <TblColumnHeader label={"Ubicacion"} />
                 <TblColumnHeader label={"Acciones"} />
             </TblHeader>
-            <ActionButtonSelect model={"Escuela"} />
-            <ActionButtonDetails model={"Escuela"} />
-            <ActionButtonEdit model={"Escuela"} />
+            <ActionButtonsContainer>
+                <ActionButtonSelect model={"Escuela"} />
+                <ActionButtonDetails model={"Escuela"} />
+                <ActionButtonEdit model={"Escuela"} />
+            </ActionButtonsContainer>
         </div>
     );
 };
