@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { getSchools } from "../schools";
 
+import AppContext from "@context/AppContext";
 import TblColumnHeader from "@components/TblColumnHeader";
 import TblHeader from "@components/TblHeader";
 import ActionButtonSelect from "@components/ActionButtonSelect";
@@ -13,6 +14,7 @@ import TblRow from "@components/TblRow";
 import "@styles/SchoolTable.scss";
 
 const SchoolTable = () => {
+    const { showCompleteNavbar } = useContext(AppContext);
     let schools = getSchools();
 
     return (
@@ -33,7 +35,10 @@ const SchoolTable = () => {
                             <TblRowCell value={school.location} />
                             <TblRowCell>
                                 <ActionButtonsContainer>
-                                    <ActionButtonSelect model={"Escuela"} />
+                                    <ActionButtonSelect
+                                        model={"Escuela"}
+                                        action={() => showCompleteNavbar(true)}
+                                    />
                                     <ActionButtonDetails model={"Escuela"} />
                                     <ActionButtonEdit model={"Escuela"} />
                                 </ActionButtonsContainer>

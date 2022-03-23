@@ -1,9 +1,10 @@
 import React from "react";
 import "@styles/NavItem.scss";
 
-const NavItem = ({ label, active, url }) => {
+const NavItem = ({ label, active, url, action }) => {
     const handleClick = () => {
         location.replace(url);
+        action.call();
     };
     return (
         <div
