@@ -7,8 +7,9 @@ import BtnArrowBack from "@components/BtnArrowBack";
 import ContentActions from "@components/ContentActions";
 import ContentHeader from "@components/ContentHeader";
 import ContentTitle from "@components/ContentTitle";
+import RowDetail from "@components/RowDetail";
+import RowDetailContainer from "@components/RowDetailContainer";
 import "@styles/SchoolDetail.scss";
-import RowDetail from "../../components/RowDetail";
 
 const SchoolDetail = () => {
     let params = useParams();
@@ -22,17 +23,22 @@ const SchoolDetail = () => {
             <ContentActions>
                 <button type='button'>Editar</button>
             </ContentActions>
-            <RowDetail label={"NOMBRE"} value={school.nombre} />
-            <RowDetail label={"CLAVE DE LA INSTITUCIÓN"} value={school.clave} />
-            <RowDetail
-                label={"CLAVE CENTRO DE TRABAJO"}
-                value={school.clave_centro_trabajo}
-            />
-            <RowDetail label={"TURNO"} value={school.turno} />
-            <RowDetail label={"DIRECCIÓN"} value={school.direccion} />
-            <RowDetail label={"ESTADO"} value={school.estado} />
-            <RowDetail label={"MUNICIPIO"} value={school.municipio} />
-            <RowDetail label={"CIUDAD"} value={school.ciudad} />
+            <RowDetailContainer>
+                <RowDetail label={"NOMBRE"} value={school.nombre} />
+                <RowDetail
+                    label={"CLAVE DE LA INSTITUCIÓN"}
+                    value={school.clave}
+                />
+                <RowDetail
+                    label={"CLAVE CENTRO DE TRABAJO"}
+                    value={school.clave_centro_trabajo}
+                />
+                <RowDetail label={"TURNO"} value={school.turno} />
+                <RowDetail label={"DIRECCIÓN"} value={school.direccion} />
+                <RowDetail label={"ESTADO"} value={school.estado} />
+                <RowDetail label={"MUNICIPIO"} value={school.municipio} />
+                <RowDetail label={"CIUDAD"} value={school.ciudad} />
+            </RowDetailContainer>
         </div>
     );
 };
