@@ -4,7 +4,14 @@ import { FaList } from "react-icons/fa";
 
 import "@styles/ActionButtonDetails.scss";
 
-const ActionButtonDetails = ({ model, action }) => {
+const areEqual = (prevProps, nextProps) => {
+    if (prevProps.model === nextProps.model) {
+        return true;
+    }
+    return false;
+};
+
+let ActionButtonDetails = ({ model, action }) => {
     return (
         <div
             className='ActionButtonDetails'
@@ -15,4 +22,4 @@ const ActionButtonDetails = ({ model, action }) => {
     );
 };
 
-export default ActionButtonDetails;
+export default ActionButtonDetails = React.memo(ActionButtonDetails, areEqual);

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@components/Navbar";
 import "@styles/MobileMenu.scss";
 
-const MobileMenu = () => {
+let MobileMenu = () => {
     return (
         <div className='MobileMenu'>
             <Navbar />
@@ -10,4 +10,4 @@ const MobileMenu = () => {
     );
 };
 
-export default MobileMenu;
+export default MobileMenu = React.memo(MobileMenu);

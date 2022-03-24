@@ -4,7 +4,14 @@ import { FaPencilAlt } from "react-icons/fa";
 
 import "@styles/ActionButtonEdit.scss";
 
-const ActionButtonEdit = ({ model, action }) => {
+const areEqual = (prevProps, nextProps) => {
+    if (prevProps.model === nextProps.model) {
+        return true;
+    }
+    return false;
+};
+
+let ActionButtonEdit = ({ model, action }) => {
     return (
         <div
             className='ActionButtonEdit'
@@ -15,4 +22,4 @@ const ActionButtonEdit = ({ model, action }) => {
     );
 };
 
-export default ActionButtonEdit;
+export default ActionButtonEdit = React.memo(ActionButtonEdit, areEqual);

@@ -4,7 +4,7 @@ import "@styles/Header.scss";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 
-const Header = () => {
+let Header = () => {
     const APP_NAME = process.env.APP_NAME;
     const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -21,4 +21,4 @@ const Header = () => {
     );
 };
 
-export default React.memo(Header);
+export default Header = React.memo(Header);

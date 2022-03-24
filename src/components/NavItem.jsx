@@ -1,7 +1,18 @@
 import React from "react";
 import "@styles/NavItem.scss";
 
-const NavItem = ({ label, active, url, action }) => {
+const areEqual = (prevProps, nextProps) => {
+    if (
+        prevProps.label === nextProps.label &&
+        prevProps.active === nextProps.active &&
+        prevProps.url === nextProps.url
+    ) {
+        return true;
+    }
+    return false;
+};
+
+let NavItem = ({ label, active, url, action }) => {
     const handleClick = () => {
         location.replace(url);
         action.call();
@@ -15,4 +26,4 @@ const NavItem = ({ label, active, url, action }) => {
     );
 };
 
-export default React.memo(NavItem);
+export default NavItem = React.memo(NavItem, areEqual);

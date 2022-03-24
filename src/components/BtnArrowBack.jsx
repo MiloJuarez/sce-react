@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 
 import "@styles/BtnArrowBack.scss";
 
-const BtnArrowBack = ({ goBack }) => {
+let BtnArrowBack = ({ goBack }) => {
     return (
         <div className='BtnArrowBack' onClick={goBack} title='Regresar'>
             <FaArrowLeft className='BtnArrowBack__icon' />
@@ -12,4 +12,4 @@ const BtnArrowBack = ({ goBack }) => {
     );
 };
 
-export default BtnArrowBack;
+export default BtnArrowBack = React.memo(BtnArrowBack);

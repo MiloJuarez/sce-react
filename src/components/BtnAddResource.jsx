@@ -4,7 +4,14 @@ import { FaPlus } from "react-icons/fa";
 
 import "@styles/BtnAddResource.scss";
 
-const BtnAddResource = ({ model, action }) => {
+const areEqual = (prevProps, nextProps) => {
+    if (prevProps.model === nextProps.model) {
+        return true;
+    }
+    return false;
+};
+
+let BtnAddResource = ({ model, action }) => {
     return (
         <div
             className='BtnAddResource'
@@ -16,4 +23,4 @@ const BtnAddResource = ({ model, action }) => {
     );
 };
 
-export default BtnAddResource;
+export default BtnAddResource = React.memo(BtnAddResource, areEqual);

@@ -1,7 +1,7 @@
 import React from "react";
 import "@styles/Menu.scss";
 
-const Menu = ({ handleToggle, toggle }) => {
+let Menu = ({ handleToggle, toggle }) => {
     return (
         <div className={`Menu ${toggle ? "open" : ""}`} onClick={handleToggle}>
             <div className='Menu__icon'></div>
@@ -9,4 +9,4 @@ const Menu = ({ handleToggle, toggle }) => {
     );
 };
 
-export default Menu;
+export default Menu = React.memo(Menu);

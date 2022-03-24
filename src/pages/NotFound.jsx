@@ -2,7 +2,7 @@ import React from "react";
 
 import "@styles/NotFound.scss";
 
-const NotFound = () => {
+let NotFound = () => {
     return (
         <div className='NotFound'>
             <p className='NotFound__message'>404 | RECURSO NO ENCONTRADO</p>
@@ -10,4 +10,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default NotFound = React.memo(NotFound);

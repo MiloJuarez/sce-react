@@ -4,7 +4,14 @@ import { FaFolderOpen } from "react-icons/fa";
 
 import "@styles/ActionButtonSelect.scss";
 
-const ActionButtonSelect = ({ model, action }) => {
+const areEqual = (prevProps, nextProps) => {
+    if (prevProps.model === nextProps.model) {
+        return true;
+    }
+    return false;
+};
+
+let ActionButtonSelect = ({ model, action }) => {
     return (
         <div
             className='ActionButtonSelect'
@@ -15,4 +22,4 @@ const ActionButtonSelect = ({ model, action }) => {
     );
 };
 
-export default ActionButtonSelect;
+export default ActionButtonSelect = React.memo(ActionButtonSelect, areEqual);
