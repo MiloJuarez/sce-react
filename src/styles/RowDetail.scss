@@ -1,0 +1,41 @@
+@use "vars";
+
+.RowDetail {
+    display: flex;
+    width: 95%;
+    min-height: 40px;
+    margin: 0 auto;
+    margin-bottom: vars.$mMargin;
+    background-color: vars.$gray-ligth;
+    box-shadow: 2px 2px 4px vars.$gray-dark;
+    box-sizing: border-box;
+
+    &:hover {
+        transform: scaleZ(1.5);
+        transition-timing-function: ease;
+        transition-duration: 0.2s;
+        border: 1px solid vars.$gray-dark;
+        box-shadow: 2px 2px 4px vars.$gray-dark;
+    }
+}
+.RowDetail__label,
+.RowDetail__value {
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+.RowDetail__label {
+    min-width: 250px;
+    width: 250px;
+    padding-left: vars.$pContent;
+    font-size: vars.$nFont;
+    font-weight: vars.$fw-light;
+    color: vars.$black;
+}
+.RowDetail__value {
+    min-width: 300px;
+    width: 1fr;
+    padding: calc(vars.$pComponent / 2) vars.$pContent;
+    font-size: vars.$nFont;
+    font-weight: vars.$fw-lighter;
+}
