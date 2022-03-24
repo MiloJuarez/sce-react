@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { getSchools } from "../schools";
+import { getSchools, getSchoolLocation } from "../schools";
 
 import AppContext from "@context/AppContext";
 import TblColumnHeader from "@components/TblColumnHeader";
@@ -16,6 +17,11 @@ import "@styles/SchoolTable.scss";
 const SchoolTable = () => {
     const { showCompleteNavbar } = useContext(AppContext);
     let schools = getSchools();
+    let navigate = useNavigate();
+
+    const showDetails = (url) => {
+        navigate(url, { state: { fromSchools: true } });
+    };
 
     return (
         <div className='SchoolTable'>
@@ -31,15 +37,22 @@ const SchoolTable = () => {
                             cells={2}
                             index={school.id}
                             key={`schoolItem-${school.id}`}>
-                            <TblRowCell value={school.name} />
-                            <TblRowCell value={school.location} />
+                            <TblRowCell value={school.nombre} />
+                            <TblRowCell value={getSchoolLocation(school)} />
                             <TblRowCell>
                                 <ActionButtonsContainer>
                                     <ActionButtonSelect
                                         model={"Escuela"}
                                         action={() => showCompleteNavbar(true)}
                                     />
-                                    <ActionButtonDetails model={"Escuela"} />
+                                    <ActionButtonDetails
+                                        model={"Escuela"}
+                                        action={() =>
+                                            showDetails(
+                                                `escuela/detalle/${school.id}`
+                                            )
+                                        }
+                                    />
                                     <ActionButtonEdit model={"Escuela"} />
                                 </ActionButtonsContainer>
                             </TblRowCell>
