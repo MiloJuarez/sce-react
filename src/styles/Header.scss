@@ -13,6 +13,7 @@
     padding: vars.$pContainer vars.$pComponent;
     background-color: vars.$wine;
     box-sizing: border-box;
+    z-index: 1;
 }
 .Header h1 {
     margin: 0 vars.$bMargin 0 0;
