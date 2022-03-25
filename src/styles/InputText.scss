@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 100%;
     min-height: 35px;
-    margin: vars.$pContent vars.$mMargin;
+    margin: vars.$pContent vars.$mMargin 0;
     border-radius: vars.$bradius;
     box-sizing: border-box;
 }
@@ -23,7 +23,7 @@
     transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
         opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.InputText input {
+.InputText input:not([disabled]) {
     width: 100%;
     padding: 0 vars.$mMargin;
     font-size: vars.$nFont;
