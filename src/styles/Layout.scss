@@ -20,3 +20,8 @@
     border-radius: vars.$bradius;
     background-color: vars.$white;
 }
+::placeholder {
+    color: vars.$gray-dark;
+    font-size: vars.$nFont;
+    font-weight: vars.$fw-lighter;
+}
