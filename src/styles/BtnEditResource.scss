@@ -1,6 +1,6 @@
 @use "vars";
 
-.BtnAddResource {
+.BtnEditResource {
     display: flex;
     align-items: center;
     width: fit-content;
@@ -9,14 +9,14 @@
     font-size: vars.$mdFont;
     font-weight: vars.$fw-light;
     color: vars.$white;
-    background-color: vars.$green;
+    background-color: vars.$cbtnPrimary;
     border-radius: vars.$bradius;
     box-shadow: 2px 2px 4px vars.$gray-dark;
     cursor: pointer;
 }
-.BtnAddResource:active {
-    border: vars.$border solid vars.$info;
+.BtnEditResource:active {
+    border: vars.$border solid vars.$gray-dark;
 }
-.BtnAddResource .PlusIcon {
+.BtnEditResource .EditIcon {
     margin: 0 vars.$mAround;
 }

@@ -10,6 +10,7 @@ import ContentTitle from "@components/ContentTitle";
 import RowDetail from "@components/RowDetail";
 import RowDetailContainer from "@components/RowDetailContainer";
 import "@styles/SchoolDetail.scss";
+import BtnEditResource from "../../components/BtnEditResource";
 
 const SchoolDetail = () => {
     let params = useParams();
@@ -21,7 +22,7 @@ const SchoolDetail = () => {
                 <ContentTitle label={"DETALLES"} />
             </ContentHeader>
             <ContentActions>
-                <button type='button'>Editar</button>
+                <BtnEditResource model={"Escuela"} />
             </ContentActions>
             <RowDetailContainer>
                 <RowDetail label={"NOMBRE"} value={school.nombre} />
