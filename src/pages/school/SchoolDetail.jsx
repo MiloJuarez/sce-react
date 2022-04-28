@@ -11,6 +11,7 @@ import RowDetail from "@components/RowDetail";
 import RowDetailContainer from "@components/RowDetailContainer";
 import "@styles/SchoolDetail.scss";
 import BtnEditResource from "../../components/BtnEditResource";
+import SchoolForm from "@containers/SchoolForm";
 
 const SchoolDetail = () => {
     let params = useParams();
@@ -24,6 +25,7 @@ const SchoolDetail = () => {
             <ContentActions>
                 <BtnEditResource model={"Escuela"} />
             </ContentActions>
+            <SchoolForm />
             <RowDetailContainer>
                 <RowDetail label={"NOMBRE"} value={school.nombre} />
                 <RowDetail

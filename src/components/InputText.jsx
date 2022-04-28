@@ -1,47 +1,41 @@
 import React from "react";
 
+import { inputKeyUp } from "@hooks/useInputKeyUp";
+
 import "@styles/InputText.scss";
 
 const areEqual = (prevProps, nextProps) => {
     if (
         prevProps.label === nextProps.label &&
         prevProps.name === nextProps.name &&
-        prevProps.placeholder === nextProps.placeholder
+        prevProps.inputValue === nextProps.inputValue
     ) {
         return true;
     }
     return false;
 };
 
-const onKeyUpEvt = (evt) => {
-    let input = evt.target;
-    let value = input.value;
-
-    let parent = input.parentNode;
-
-    if (value) {
-        parent.classList.add("hasValue");
-    } else {
-        parent.classList.remove("hasValue");
-    }
-};
-
 let InputText = ({
     label = "Example",
     name = "example",
-    placeholder = "Example",
+    inputValue = "",
+    onChangeEvt,
+    error = "",
 }) => {
     return (
-        <div className='InputText'>
+        <div className={`InputText ${inputValue != "" ? "hasValue" : ""}`}>
             <input
                 type='text'
                 name={`${name}`}
                 id={`${name}`}
-                onKeyUp={onKeyUpEvt}
+                defaultValue={`${inputValue}`}
+                onKeyUp={inputKeyUp}
+                onChange={onChangeEvt}
             />
             <span className='InputText__label' htmlFor={`${name}`}>
                 {label}
             </span>
+            {error != "" ? <span>{error}</span> : null}
         </div>
     );
 };
