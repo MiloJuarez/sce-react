@@ -24,6 +24,7 @@ module.exports = {
             "@hooks": path.resolve(__dirname, "src/hooks/"),
             "@pages": path.resolve(__dirname, "src/pages/"),
             "@styles": path.resolve(__dirname, "src/styles/"),
+            "@api": path.resolve(__dirname, "src/services/api/"),
         },
     },
     module: {

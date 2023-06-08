@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { getSchool } from "../../schools";
+import useFetch from "@hooks/useFetch";
+import endpoints from "@api/endpoints";
 
 import BtnArrowBack from "@components/BtnArrowBack";
 import ContentActions from "@components/ContentActions";
@@ -15,7 +16,7 @@ import SchoolForm from "@containers/SchoolForm";
 
 const SchoolDetail = () => {
     let params = useParams();
-    let school = getSchool(parseInt(params.schoolId));
+    const school = useFetch(endpoints.schools.get(parseInt(params.schoolId)));
     return (
         <div className='SchoolDetail'>
             <ContentHeader>
@@ -27,20 +28,20 @@ const SchoolDetail = () => {
             </ContentActions>
             <SchoolForm />
             <RowDetailContainer>
-                <RowDetail label={"NOMBRE"} value={school.nombre} />
+                <RowDetail label={"NOMBRE"} value={school.name} />
                 <RowDetail
                     label={"CLAVE DE LA INSTITUCIÓN"}
-                    value={school.clave}
+                    value={school.sep_key}
                 />
                 <RowDetail
                     label={"CLAVE CENTRO DE TRABAJO"}
-                    value={school.clave_centro_trabajo}
+                    value={school.work_center_key}
                 />
-                <RowDetail label={"TURNO"} value={school.turno} />
-                <RowDetail label={"DIRECCIÓN"} value={school.direccion} />
-                <RowDetail label={"ESTADO"} value={school.estado} />
-                <RowDetail label={"MUNICIPIO"} value={school.municipio} />
-                <RowDetail label={"CIUDAD"} value={school.ciudad} />
+                <RowDetail label={"TURNO"} value={school.duty} />
+                <RowDetail label={"DIRECCIÓN"} value={school.address} />
+                <RowDetail label={"ESTADO"} value={school.state} />
+                <RowDetail label={"MUNICIPIO"} value={school.town} />
+                <RowDetail label={"CIUDAD"} value={school.city} />
             </RowDetailContainer>
         </div>
     );

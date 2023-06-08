@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getSchools, getSchoolLocation } from "../schools";
+import useFetch from "@hooks/useFetch";
+import endpoints from "@api/endpoints";
 
 import AppContext from "@context/AppContext";
 import TblColumnHeader from "@components/TblColumnHeader";
@@ -16,7 +18,9 @@ import "@styles/SchoolTable.scss";
 
 const SchoolTable = () => {
     const { showCompleteNavbar } = useContext(AppContext);
-    let schools = getSchools();
+    console.log(endpoints.schools.all());
+    const schools = useFetch(endpoints.schools.all());
+    console.log(schools);
     let navigate = useNavigate();
 
     const showDetails = (url) => {
@@ -37,7 +41,7 @@ const SchoolTable = () => {
                             cells={2}
                             index={school.id}
                             key={`schoolItem-${school.id}`}>
-                            <TblRowCell value={school.nombre} />
+                            <TblRowCell value={school.name} />
                             <TblRowCell value={getSchoolLocation(school)} />
                             <TblRowCell>
                                 <ActionButtonsContainer>

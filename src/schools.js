@@ -82,5 +82,5 @@ export function getSchool(schoolId) {
 }
 
 export function getSchoolLocation(school) {
-    return `${school.ciudad}, ${school.estado}`;
+    return `${school.city}, ${school.state}`;
 }
